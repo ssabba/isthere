@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<script src="./javaScript/language.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>Web Notepad</title>
+  </head>
+  <body>  
+    <div class="container">
+      <div class="nav">
+        <div class="top-bar">
+          <div class="dropdown file" data-dropdown>
+            <button class="link" data-dropdown-button>file</button>
+            <div class="dropdown-menu drop-file" id="dropdown-menu-file">
+              <a id="file-opt-new">new</a>
+              <a id="file-opt-open">open</a>
+              <a id="file-opt-save">save</a>
+              <a id="file-opt-save-as">save as</a>
+              <a id="file-opt-save-as-pdf">save as pdf</a>
+              <a id="file-opt-print">print</a>
+              <a id="file-opt-share">share</a>
+            </div>
+          </div>
+          <div class="dropdown edit" data-dropdown>
+            <button class="link" data-dropdown-button>edit</button>
+            <div class="dropdown-menu drop-edit" id="dropdown-menu-edit">
+              <a id="edit-opt-cut">cut</a>
+              <a id="edit-opt-copy">copy</a>
+              <a id="edit-opt-delete">delete</a>
+              <a id="edit-opt-select-all">select all</a>
+              <a id="edit-opt-paste">paste</a>
+              <a id="edit-opt-undo">undo</a>
+              <a id="edit-opt-redo">redo</a>
+            </div>
+          </div>
+          <div class="dropdown view" data-dropdown>
+            <button class="link" data-dropdown-button>view</button>
+            <div class="dropdown-menu drop-view" id="dropdown-menu-view">
+              <a id="dropdown-opt-auto-line-break">auto line-break</a>
+              <a id="toggle-number-bar"
+                ><span id="lineNumberState">show</span> linenumber</a
+              >
+              <a id="toggleColorMode">Dark Mode</a>
+            </div>
+          </div>
+          <div class="dropdown view" data-dropdown>
+            <button class="link" id="log"></button>
+          </div>
+        </div>
+        <div class="options">
+          <div class="option options-1" id="option-1">
+            <button class="option-icon" id="new-short-btn">
+              <img src="./assets/icons/new.png" alt="new" />
+            </button>
+            <button class="option-icon" id="open-short-btn">
+              <img src="./assets/icons/open.png" alt="open" />
+            </button>
+            <button class="option-icon" id="save-short-btn">
+              <img src="./assets/icons/save.png" alt="save" />
+            </button>
+          </div>
+          <div class="option options-2" id="option-2">
+            <button class="option-icon" id="print-short-btn">
+              <img src="./assets/icons/print.png" alt="print" />
+            </button>
+            <button class="option-icon" id="cut-short-btn">
+              <img src="./assets/icons/cut.png" alt="cut" />
+            </button>
+            <button class="option-icon" id="copy-short-btn">
+              <img src="./assets/icons/copy.png" alt="copy" />
+            </button>
+            <button class="option-icon" id="paste-short-btn">
+              <img src="./assets/icons/paste.png" alt="paste" />
+            </button>
+            <button class="option-icon" id="share-short-btn">
+              <img src="./assets/icons/share.png" alt="share" />
+            </button>
+            <button class="option-icon" id="undo-short-btn">
+              <img src="./assets/icons/undo.png" alt="undo" />
+            </button>
+            <button class="option-icon" id="redo-short-btn">
+              <img src="./assets/icons/redo.png" alt="redo" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="editor" id="editor"></div>
+      <div
+        id="vertical-toggle-button"
+        class="vertical-toggle vertical-enactive"
+      >
+        select text vertically
+        <br />
+        <span class="vertical-toggle-status" id="vertical-toggle-status"
+          >off</span
+        >
+      </div>
+    </div>
+    <script
+      src="./js/editor.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <script src="./js/jspdf.js" type="text/javascript" charset="utf-8"></script>
+    <script src="./js/ui.js" type="text/javascript" charset="utf-8"></script>
+    <script
+      src="./js/script.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+  </body>
+</html>
